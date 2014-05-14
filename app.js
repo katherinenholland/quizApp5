@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	instructions();
 	question1();
 	question2();
 	question3();
@@ -11,7 +12,6 @@ var finalScore = [];//array that holds score for each question answer
 
 answer1 = function() {
 	$("input:radio[name=b]").click(function() {
-		$(this).val();
 		var a = parseInt( $(this).val() );
 		finalScore.push(a);
 	})
@@ -19,7 +19,6 @@ answer1 = function() {
 
 answer2 = function() {
 	$("input:radio[name=g]").click(function() {
-		$(this).val();
 		var a = parseInt( $(this).val() );
 		finalScore.push(a);
 	})
@@ -27,7 +26,6 @@ answer2 = function() {
 
 answer3 = function() {
 	$("input:radio[name=b]").click(function() {
-		$(this).val();
 		var a = parseInt( $(this).val() );
 		finalScore.push(a);
 	})
@@ -35,7 +33,6 @@ answer3 = function() {
 
 answer4 = function() {
 	$("input:radio[name=s]").click(function() {
-		$(this).val();
 		var a = parseInt( $(this).val() );
 		finalScore.push(a);
 	})
@@ -43,50 +40,55 @@ answer4 = function() {
 
 answer5 = function() {
 	$("input:radio[name=c]").click(function() {
-		$(this).val();
 		var a = parseInt( $(this).val() );
 		finalScore.push(a);
 	})
 };//pushes score of Question 5 to finalScore[]
 
-question1 = function() {
+instructions = function() {
 	$(".button1").click(function() {
+	$(".question1").show();
+		$(".instructions").hide();	
+	})
+};
+
+question1 = function() {
+	$(".button2").click(function() {
 		answer1();
-		$(".question1").show();
-		$(".instructions").hide();
+	$(".question2").show();
+	$(".question1").hide();		
 	})
 
 };//records user selection for Question 1
 
 question2 = function() {
-	$(".button2").click(function() {
+	$(".button3").click(function() {
 		answer2();
-		$(".question2").show();
-		$(".question1").hide();
+		$(".question3").show();
+		$(".question2").hide();	
 	})
 };//records user selection for Question 2
 
 question3 = function() {
-	$(".button3").click(function() {
+	$(".button4").click(function() {
 		answer3();
-		$(".question3").show();
-		$(".question2").hide();
+		$(".question4").show();
+		$(".question3").hide();	
 	})
 };//records user selection for Question 3
 
 question4 = function() {
-	$(".button4").click(function() {
+	$(".button5").click(function() {
 		answer4();
-		$(".question4").show();
-		$(".question3").hide();
+		$(".question5").show();
+		$(".question4").hide();	
 	})
 };//records user selection for Question 4
 
 question5 = function() {
-	$(".button5").click(function() {
+	$(".button6").click(function() {
 		answer5();
-		$(".question5").show();
-		$(".question4").hide();
+		
 	})
 };//records user selection for Question 5
 var totalScore = [];
@@ -103,7 +105,7 @@ total = function() {
 score = function() {
 	$(".button6").click(function() {
 		total();
-		$(totalScore).append(".score");
+		$(".score").text(totalScore);
 		$(".score").show();
 		$(".question5").hide();
 	})
