@@ -12,8 +12,7 @@ var finalScore = [];//array that holds score for each question answer
 answer1 = function() {
 	$("input:radio[name=b]").click(function() {
 		$(this).val();
-		var a = $(this).val();
-		parseInt(a);
+		var a = parseInt( $(this).val() );
 		finalScore.push(a);
 	})
 };//pushes score of Question 1 to finalScore []
@@ -21,8 +20,7 @@ answer1 = function() {
 answer2 = function() {
 	$("input:radio[name=g]").click(function() {
 		$(this).val();
-		var a = $(this).val();
-		parseInt(a);
+		var a = parseInt( $(this).val() );
 		finalScore.push(a);
 	})
 };//pushes score of Question 2 to finalScore []
@@ -30,8 +28,7 @@ answer2 = function() {
 answer3 = function() {
 	$("input:radio[name=b]").click(function() {
 		$(this).val();
-		var a = $(this).val();
-		parseInt(a);
+		var a = parseInt( $(this).val() );
 		finalScore.push(a);
 	})
 };//pushes score of Question 3 to finalScore[]
@@ -39,8 +36,7 @@ answer3 = function() {
 answer4 = function() {
 	$("input:radio[name=s]").click(function() {
 		$(this).val();
-		var a = $(this).val();
-		parseInt(a);
+		var a = parseInt( $(this).val() );
 		finalScore.push(a);
 	})
 };//pushes score of Question 4 to finalScore[]
@@ -48,8 +44,7 @@ answer4 = function() {
 answer5 = function() {
 	$("input:radio[name=c]").click(function() {
 		$(this).val();
-		var a = $(this).val();
-		parseInt(a);
+		var a = parseInt( $(this).val() );
 		finalScore.push(a);
 	})
 };//pushes score of Question 5 to finalScore[]
