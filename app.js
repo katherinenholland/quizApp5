@@ -10,7 +10,8 @@ $(document).ready(function() {
 	$(".question1Button").click(function() {
 		if ($(".correctAnswer").is(":checked")) {
 			finalScore.push(1);
-		}
+		} else 
+			finalScore.push(0);
 		$(".question2").show();
 		$(".question1").hide();		
 	});
@@ -18,7 +19,8 @@ $(document).ready(function() {
 	$(".question2Button").click(function() {
 		if ($(".correctAnswer").is(":checked")) {
 			finalScore.push(1);
-		}
+		} else 
+			finalScore.push(0);
 		$(".question3").show();
 		$(".question2").hide();	
 	});
@@ -26,7 +28,8 @@ $(document).ready(function() {
 	$(".question3Button").click(function() {
 		if ($(".correctAnswer").is(":checked")) {
 			finalScore.push(1);
-		}
+		} else 
+			finalScore.push(0);
 		$(".question4").show();
 		$(".question3").hide();	
 	});
@@ -34,7 +37,8 @@ $(document).ready(function() {
 	$(".question4Button").click(function() {
 		if ($(".correctAnswer").is(":checked")) {
 			finalScore.push(1);
-		}
+		} else 
+			finalScore.push(0);
 		$(".question5").show();
 		$(".question4").hide();	
 	});
@@ -43,9 +47,11 @@ $(document).ready(function() {
 	$(".question5Button").click(function() {
 		if ($(".correctAnswer").is(":checked")) {
 			finalScore.push(1);
-		} 
+		} else 
+			finalScore.push(0); 
 
 		total();
+
 		$(".score").show();
 		$(".score").text(totalScore + " out of 5 Correct!");
 		$(".question5").hide();	
