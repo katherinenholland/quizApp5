@@ -44,28 +44,24 @@ $(document).ready(function() {
 		if ($(".correctAnswer").is(":checked")) {
 			finalScore.push(1);
 		} 
+
+		total();
 		$(".score").show();
+		$(".score").text(totalScore + " out of 5 Correct!");
 		$(".question5").hide();	
 	});	
-
-	total();
-	
-	$(".score").text(totalScore + " out of 5 Correct!");
 		
 	$('.newGameButton').click(function() {
 		location.reload();
 	});
 
+	total = function() {
+		var sum = 0;
+			for (i = 0; i < 5; i++)
+			{
+			sum = sum + finalScore[i];	
+			}
+			totalScore.push(sum);
+	};//totals the finalScore[] and pushes the total to totalScore
+
 }); //end of document ready function
-
-
-
-total = function() {
-	var sum = 0;
-	for (i = 0; i < 5; i++)
-	{
-	sum = sum + finalScore[i];	
-	}
-	totalScore.push(sum);
-};//totals the finalScore[] and pushes the total to totalScore
-
