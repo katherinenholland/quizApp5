@@ -1,45 +1,57 @@
 $(document).ready(function() {
-	var finalScore = [];//array that holds score for each question answer
-	var totalScore = [];//array used to find sum of score
+	var finalScore = [];
+	var totalScore = [];
 
 	$(".instructionButton").click(function() {
-		$(".question1").show();
+		$(".question1").fadeIn();
 		$(".instructions").hide();	
 		});
 
 	$(".question1Button").click(function() {
 		if ($(".correctAnswer").is(":checked")) {
 			finalScore.push(1);
-		} else 
+		} 
+		else {
 			finalScore.push(0);
-		$(".question2").show();
+		}
+
+		$(".question2").fadeIn();
 		$(".question1").hide();		
 	});
 
 	$(".question2Button").click(function() {
 		if ($(".correctAnswer").is(":checked")) {
 			finalScore.push(1);
-		} else 
+		} 
+		else {
 			finalScore.push(0);
-		$(".question3").show();
+		}
+
+		$(".question3").fadeIn();
 		$(".question2").hide();	
 	});
 
 	$(".question3Button").click(function() {
 		if ($(".correctAnswer").is(":checked")) {
 			finalScore.push(1);
-		} else 
+		} 
+		else {
 			finalScore.push(0);
-		$(".question4").show();
+		}
+
+		$(".question4").fadeIn();
 		$(".question3").hide();	
 	});
 
 	$(".question4Button").click(function() {
 		if ($(".correctAnswer").is(":checked")) {
 			finalScore.push(1);
-		} else 
+		} 
+		else {
 			finalScore.push(0);
-		$(".question5").show();
+		}
+
+		$(".question5").fadeIn();
 		$(".question4").hide();	
 	});
 	
@@ -47,14 +59,17 @@ $(document).ready(function() {
 	$(".question5Button").click(function() {
 		if ($(".correctAnswer").is(":checked")) {
 			finalScore.push(1);
-		} else 
+		} 
+		else {
 			finalScore.push(0); 
+		}
 
 		total();
 
-		$(".score").show();
-		$(".score").text(totalScore + " out of 5 Correct!");
+		$(".score").fadeIn();
+		$(".score").text( totalScore + " out of 5 Correct!");
 		$(".question5").hide();	
+		$(".newGameButton").fadeIn(1000);
 	});	
 		
 	$('.newGameButton').click(function() {
